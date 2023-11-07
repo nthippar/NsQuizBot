@@ -3,17 +3,18 @@
 # from streamlit_extras.colored_header import colored_header
 # from streamlit_extras.add_vertical_space import add_vertical_space
 # from hugchat import hugchat
-from requests import requests
+import requests
 
 response = requests.get("https://api.open-notify.org/this-api-doesnt-exist")
 
-
+print(response.status_code)
+print(response.json())
 
 # st.set_page_config(page_title="HugChat - An LLM-powered Streamlit app")
 
 # # Sidebar contents
-with st.sidebar:
-    st.title('response.status_code')
+# with st.sidebar:
+#     st.title('response.status_code')
 #     st.markdown('''
 #     ## About
 #     This app is an LLM-powered quiz built using:
