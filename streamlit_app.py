@@ -3,15 +3,17 @@ from streamlit_chat import message
 from streamlit_extras.colored_header import colored_header
 from streamlit_extras.add_vertical_space import add_vertical_space
 from hugchat import hugchat
+from request import requests
+
 
 st.set_page_config(page_title="HugChat - An LLM-powered Streamlit app")
 
 # Sidebar contents
 with st.sidebar:
-    st.title('🤗💬 HugChat App')
+    st.title('NS Quiz Bot')
     st.markdown('''
     ## About
-    This app is an LLM-powered chatbot built using:
+    This app is an LLM-powered quiz built using:
     - [Streamlit](https://streamlit.io/)
     - [HugChat](https://github.com/Soulter/hugging-chat-api)
     - [OpenAssistant/oasst-sft-6-llama-30b-xor](https://huggingface.co/OpenAssistant/oasst-sft-6-llama-30b-xor) LLM model
@@ -46,9 +48,9 @@ with input_container:
 # Response output
 ## Function for taking user prompt as input followed by producing AI generated responses
 def generate_response(prompt):
-    chatbot = hugchat.ChatBot()
-    response = chatbot.chat(prompt)
-    return response
+    response = requests.get("https://api.open-notify.org/this-api-doesnt-exist")
+    # response = chatbot.chat(prompt)
+    return response.status_code
 
 ## Conditional display of AI generated responses as a function of user provided prompts
 with response_container:

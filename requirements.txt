@@ -4,3 +4,4 @@ scikit-learn==1.1.0
 hugchat
 streamlit-chat
 streamlit-extras
+requests
