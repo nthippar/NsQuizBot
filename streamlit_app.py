@@ -3,7 +3,7 @@
 # from streamlit_extras.colored_header import colored_header
 # from streamlit_extras.add_vertical_space import add_vertical_space
 # from hugchat import hugchat
-from request import requests
+from requests import requests
 
 response = requests.get("https://api.open-notify.org/this-api-doesnt-exist")
 
