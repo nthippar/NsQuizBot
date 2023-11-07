@@ -1,4 +1,4 @@
-# 📦 Streamlit App Starter Kit 
+# 📦 NS Quiz bot 
 ```
 ⬆️ (Replace above with your app's name)
 ```
